@@ -1,55 +1,117 @@
 /*
 Name: Linh Phan
 NID: li460489
-PiD: 5666634
-Date: 3/3/2025
+PiD:5666634
+Date: 2/10/2025
 Course: COP3330-0003
-Description: Programming Assignment 2, Results of 1000 dices
- */
-package assignment2;
+Description: Programming assignment 1, making a random receipt for a store
+*/
 
-import java.util.ArrayList;
+package assignment1;
+
+import java.util.Scanner;
 
 public class Phan_Linh {
-	public static void main (String arg[]) {
-		Dice dice = new Dice();
-		int[] results = new int[11];
-		//determine how many times a sum was rolled
-		for(int i = 0; i < 1000; i++) {
-			dice.rollDice();
-			int sum = dice.getFaceValueSum();
-			results[sum-2] = results[sum-2] + 1;
-		}
-		//printing out the sum results
-		for (int i = 0; i < 11; i++) {
-			System.out.println("Number of " + (i+2) + " are " + results[i]);
-		}
-		int yCounter = 175;
-		while(yCounter >= 0) {
-			//printing out the histogram
-			if(yCounter >= 100) {
-				System.out.print(yCounter + "|");
-			}
-			else if(yCounter > 0) {
-				System.out.print(" " + yCounter + "|");
-			}
-			else {
-				System.out.print("  " + yCounter + "|");
-			}
-			for(int i = 0; i < results.length; i++) {
-				if(i != 0) {
-					System.out.print(" ");
-				}
-				if (results[i] >= yCounter) {
-					System.out.print("* ");
-				}
-				else if(results[i] < yCounter) {
-					System.out.print("  ");
-				}
-			}
-			System.out.print("\n");
-			yCounter = yCounter - 25;
-		}
-		System.out.println("    --------------------------------\n    2  3  4  5  6  7  8  9  10 11 12");
+
+	public static void main(String[] args) {
+		
+		//create a random receipt number
+		 int receiptNumber;
+		 int receiptMin = 1000;
+		 int receiptMax = 2000;
+		 receiptNumber = (int) (Math.random() * (receiptMax - receiptMin)) + receiptMin;
+		 System.out.println("******************************\n****** S Store ***************\n******************************");
+		 System.out.println("receipt number      " + receiptNumber);
+		 
+		 //create a random month number
+		 int monthNumber;
+		 String monthName = "";
+		 int monthMin = 1;
+		 int monthtMax = 12;
+		 monthNumber = (int) (Math.random() * (monthtMax - monthMin + 1)) + monthMin;
+		 
+		 //converting month number into word
+		 if (monthNumber == 1) {
+			 monthName = "January";
+		 } else if (monthNumber == 2) {
+			 monthName = "February";
+		 } else if (monthNumber == 3) {
+			 monthName = "March";
+		 } else if (monthNumber == 4) {
+			 monthName = "April";
+		 } else if (monthNumber == 5) {
+			 monthName = "May";
+		 } else if (monthNumber == 6) {
+			 monthName = "June";
+		 } else if (monthNumber == 7) {
+			 monthName = "July";
+		 } else if (monthNumber == 8) {
+			 monthName = "August";
+		 } else if (monthNumber == 9) {
+			 monthName = "September";
+		 } else if (monthNumber == 10) {
+			 monthName = "October";
+		 } else if (monthNumber == 11) {
+			 monthName = "November";
+		 } else if (monthNumber == 12) {
+			 monthName = "December";
+		 }
+		 
+		 //create a random day number
+		 int dayNumber;
+		 int dayMin = 1;
+		 int dayMax = 28;
+		 dayNumber = (int) (Math.random() * (dayMax - dayMin + 1)) + dayMin;
+		 
+		 //create a random year number
+		 int yearNumber;
+		 int yearMin = 1900;
+		 int yearMax = 2100;
+		 yearNumber = (int) (Math.random() * (yearMax - yearMin)) + yearMin;
+		 
+		 System.out.println(monthName + " " + dayNumber + " " + yearNumber);
+		 
+		 //taking in user's items input
+		 
+		 Scanner scan = new Scanner(System.in);
+		 String item = "";
+		 int itemNumber = 0;
+		 double total = 0;
+		
+		 //loop to scan user input 
+		 while (!item.equals("DONE")) {
+			 //scanning item name
+			 System.out.print("Write item name ");
+			 item = scan.nextLine();
+			 if (item.compareTo("DONE") == 0) {
+				 break;
+			 }
+			 itemNumber++;
+			 
+			 //capitalizing first letter of items
+			 item = item.substring(0, 1).toUpperCase() + item.substring(1);
+			 
+			 //scanning item price
+			 System.out.print("Write price ");
+			 float price = scan.nextFloat();
+			 scan.nextLine();
+			 
+			 //figuring out what item to tax and what items that are tax free (food)
+			 if (item.compareTo("food") == 0 || item.compareTo("Food") == 0) {
+				 price = Math.round(price);
+				 System.out.println("item number " + itemNumber + " " + item + " " + price);
+				 total = total + price;
+			 }
+			 else {
+				 float taxed = (float) (price*1.3);
+				 taxed = Math.round(taxed);
+				 System.out.println("item number " + itemNumber + " " + item + " " + taxed);
+				 total = total + taxed;
+			 }
+		 }
+		 System.out.println(itemNumber + " items      total " + total);
+		 scan.close();
+
 	}
+
 }
