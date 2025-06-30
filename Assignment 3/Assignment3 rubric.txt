@@ -1,0 +1,32 @@
+Detailed Rubric:
+
+1. Implementation Using LinkedList (+20)
+   - Full points if implemented with `LinkedList`. 
+   - 20 points will be reduced if using `ArrayList`, `Array`, or other non-permitted structures.
+
+2. Submission Rules and Compilation(+25)
+   - Full points if submission follows all rules (no class files, proper file names, etc.) and compiles
+   - 10 points will be reduced if the package name or class file names are incorrect
+   - 25 points will be reduced if the code does not get compiled. Also you won't get any grade from output.
+
+  
+3. Private Instance Variables (+10)
+   - Full points if all instance variables are private.
+   - (-5) points if any instance variable is not private.
+
+4. Public Methods (+10)
+   - Full points if all methods are public, and no `setItem` method is present.
+   - (-10) points if there is any `setItem` method or methods are not public.
+
+5. Output Correctness (+15)
+   - +15 points if all output entries are correct.
+   - +10 points if only one output entry is missing.
+   - **+5 points** if fewer than 10 output entries are missing.
+   - **0 points** if no output or more than 10 entries are missing.
+
+6. Code Comments (+10)
+   - **+10 points** if each file contains comments explaining the code. If no header comments 10 pts will be reduced.
+
+7. Code Efficiency and Structure (+10)
+   - **+5 points** if there is a method to read the file to LinkedList( construct() )
+   - **+5 points** if there is a method to process the LinkedList ( process() )
