@@ -1,0 +1,27 @@
+The description is here.Download here.
+
+The rubric is here.Download here.
+
+ 
+
+The late submission window will close in 24 hours. If you submit late, you will lose 15% of your grade. Under no circumstances, late submissions will be accepted after the late window. Emails containing submissions to TAs or to the instructor will be ignored.
+
+ 
+
+Do NOT forget to add comments as much as possible. Include a header comment for your file and for your additional methods if you have written.
+
+Header comment includes your name and lastname. PID/NID. Assignment number and what does your program do in a few sentences.
+
+Proper indentation is also important. Please see the course slides to see appropriate indentation styles.
+
+ 
+
+Upload rules:
+
+Zip three files and upload the zip file. Do not put the java files in a folder and zip the folder. When we open the zip file, we should be able to see 3 files inside without a seeing a folder first. Do not RAR the file. Just use zip. You will lose 10 pts if your submission does not follow this rule.
+
+Name your zip file as Lastname_Firstname.zip
+
+You need to upload 3 java files. Die.java, Dice.java and Lastname_Firstname.java. Your last submission will be taken into account. You can upload as often as you like.
+
+The histogram graph generating code will be inside Lastname_Firstname.java. The other classes (dice and die) should NOT have a main method inside. All your java files will be inside package assignment2. In other words, all your java files should have package assignment2; in the first line.
