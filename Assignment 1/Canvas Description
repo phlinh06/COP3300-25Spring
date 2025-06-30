@@ -1,0 +1,41 @@
+The description is here.Download The description is here.
+
+Rubric is here.Download Rubric is here.
+
+ 
+
+ 
+
+The late submission window will close in 24 hours. If you submit late, you will lose 15% of your grade. Under no circumstances, late submissions will be accepted after the late window. Emails containing submissions to TAs or to the instructor will be ignored.
+
+ 
+
+Do NOT forget to add comments as much as possible. Include a header comment for your file and for your additional methods if you have written.
+
+Proper indentation is also important. Please see the course slides to see appropriate indentation styles.
+
+ 
+
+You need to upload one java file. Your last submission will be taken into account. You can upload as often as you like.
+
+You will need to name your java file as "Lastname_Firstname.java". Therefore the class name will need to be "Lastname_Firstname"
+
+ 
+
+example file content whose name is Doe_John.java
+
+package assignment1;
+
+//imports...
+
+public class Doe_John{
+
+...
+
+}
+
+ 
+
+DO NOT upload class file. If your file is not readable, you will get zero.
+
+DO NOT wait until the last minute.  There will be no exception for assignments couldn't be submitted one minute before the due date/time. Submit EARLY.
